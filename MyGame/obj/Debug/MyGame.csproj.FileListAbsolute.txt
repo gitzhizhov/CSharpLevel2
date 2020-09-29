@@ -1,0 +1,7 @@
+D:\Geekbrains\C# Уровень 2\HW\MyGame\obj\Debug\MyGame.csprojAssemblyReference.cache
+D:\Geekbrains\C# Уровень 2\HW\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+D:\Geekbrains\C# Уровень 2\HW\MyGame\bin\Debug\MyGame.exe.config
+D:\Geekbrains\C# Уровень 2\HW\MyGame\bin\Debug\MyGame.exe
+D:\Geekbrains\C# Уровень 2\HW\MyGame\bin\Debug\MyGame.pdb
+D:\Geekbrains\C# Уровень 2\HW\MyGame\obj\Debug\MyGame.exe
+D:\Geekbrains\C# Уровень 2\HW\MyGame\obj\Debug\MyGame.pdb
