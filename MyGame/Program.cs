@@ -18,7 +18,6 @@ namespace MyGame
             MF.Show();
             Game.Draw();
             Application.Run(MF);
-
         }
     }
 }

@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace MyGame
 {
+    /// <summary>
+    /// Клас описывает планеты
+    /// </summary>
     class Planet : BaseObject
     {
         Bitmap image = new Bitmap("..\\..\\img/planet.png");
 
+        /// <summary>
+        /// Инициализирует объект Planet при помощи базового конструктора BaseObject
+        /// </summary>
+        /// <param name="pos">Позиция</param>
+        /// <param name="dir">Направление</param>
+        /// <param name="size">Размер</param>
         public Planet(Point pos, Point dir, Size size) : base(pos, dir, size) { }
 
         /// <summary>

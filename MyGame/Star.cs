@@ -7,6 +7,9 @@ using System.Drawing;
 
 namespace MyGame
 {
+    /// <summary>
+    /// Клас описывает звезды
+    /// </summary>
     class Star : BaseObject
     {
         List<Bitmap> bitmapsList = new List<Bitmap>
@@ -20,12 +23,13 @@ namespace MyGame
         };
 
         int starIndex = 0;
+
         /// <summary>
         /// Инициализирует объект Star при помощи базового конструктора BaseObject
         /// </summary>
-        /// <param name="pos"></param>
-        /// <param name="dir"></param>
-        /// <param name="size"></param>
+        /// <param name="pos">Позиция</param>
+        /// <param name="dir">Направление</param>
+        /// <param name="size">Размер</param>
         public Star(Point pos, Point dir, Size size) : base(pos, dir, size) { }
 
         /// <summary>
