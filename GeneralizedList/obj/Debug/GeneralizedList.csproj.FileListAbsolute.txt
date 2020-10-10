@@ -1,0 +1,7 @@
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\bin\Debug\GeneralizedList.exe.config
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\bin\Debug\GeneralizedList.exe
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\bin\Debug\GeneralizedList.pdb
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\obj\Debug\GeneralizedList.csprojAssemblyReference.cache
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\obj\Debug\GeneralizedList.csproj.CoreCompileInputs.cache
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\obj\Debug\GeneralizedList.exe
+D:\DUH\!Geekbrains\C# Уровень 2\HW\GeneralizedList\obj\Debug\GeneralizedList.pdb

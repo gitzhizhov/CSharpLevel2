@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.CodeDom.Compiler;
 
 namespace MyGame
 {
     /// <summary>
     /// Клас описывает астеройдов
     /// </summary>
-    class Asteroid : BaseObject
+    class Asteroid : BaseObject, ICloneable, IComparable, IComparable<Asteroid>
     {
-        public int Power { get; set; }
+        public int Power { get; set; } = 3;
+        public static int CountAsteroid { get; set; } = 1;
 
+        public static event Action<string> AsteroidCreation;
+        public static event Action<string> AsteroidRecreation;
         /// <summary>
         /// Инициализирует объект Asteroid при помощи базового конструктора BaseObject
         /// </summary>
@@ -23,6 +27,34 @@ namespace MyGame
         public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
             Power = 1;
+            AsteroidCreation?.Invoke($"Астерой создан в координатах {Pos.X}, {Pos.Y} размером {Size.Width}");
+        }
+        /// <summary>
+        /// Реализация обобщённого интерфейса IComparable
+        /// </summary>
+        /// <param name="obj">Объект для сравнения</param>
+        /// <returns></returns>
+        int IComparable.CompareTo(object obj)
+        {
+            if (obj is Asteroid temp)
+            {
+                if (Power > temp.Power)
+                    return 1;
+                if (Power < temp.Power)
+                    return -1;
+                else
+                    return 0;
+            }
+            throw new ArgumentException("Параметр не является Астеройдом");
+        }
+
+        int IComparable<Asteroid>.CompareTo(Asteroid obj)
+        {
+            if (Power > obj.Power)
+                return 1;
+            if (Power < obj.Power)
+                return -1;
+            return 0;
         }
 
         /// <summary>
@@ -38,6 +70,7 @@ namespace MyGame
             return asteroid;
         }
 
+        
         /// <summary>
         /// Метод отрисовки объекта
         /// </summary>
@@ -66,6 +99,7 @@ namespace MyGame
         {
             Pos.X = Game.Width - Size.Width;
             Pos.Y = Convert.ToInt32(rnd.NextDouble() * (Game.Height - Size.Height));
+            AsteroidRecreation?.Invoke("Астерой пересоздан");
         }
     }
 }
